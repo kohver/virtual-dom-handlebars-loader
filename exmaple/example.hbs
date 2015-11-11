@@ -1,0 +1,20 @@
+<div class="hand{{#if isDisabled}} hand--disabled{{/if}}">
+    {{#each cards}}
+        <div class="hand__card" data-id="{{id}}" style="
+            {{getCardPositionStyle @index ../cards}};
+            {{#ifCond id "===" ../cardId}}
+            /*дублирует стили в updateCardElementFollowingMouse*/
+                    position: fixed;
+                    top: {{../cardY}}px;
+                    left: {{../cardX}}px;
+                    margin: 0;
+                    transform: none;
+                    pointer-events: none;
+                    z-index: 1000;
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            {{/ifCond}}
+                ">
+            {{>src/durak/game/card/Card}}
+        </div>
+    {{/each}}
+</div>

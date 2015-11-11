@@ -18,6 +18,6 @@
   "homepage": "https://github.com/kohver/virtual-dom-handlebars-loader#readme",
   "dependencies": {
     "virtual-dom": "^2.1.1",
-    "virtual-dom-handlebars": "0.0.1"
+    "virtual-dom-handlebars": "git+https://github.com/kohver/virtual-dom-handlebars.git"
   }
 }
